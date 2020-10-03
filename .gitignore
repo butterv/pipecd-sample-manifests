@@ -1,0 +1,6 @@
+.*
+!.gitignore
+dist/
+.idea/
+*.pem
+*.key
