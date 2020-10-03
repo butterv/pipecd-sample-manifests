@@ -1,0 +1,10 @@
+resources:
+  - job/job.yaml
+  - migration/job.yaml
+  - proxy/configmap.yaml
+  - proxy/rollout.yaml
+  - proxy/service.yaml
+  - sealed-secret/env-sealed-secret.yaml
+  - server/configmap.yaml
+  - server/rollout.yaml
+  - server/service.yaml
