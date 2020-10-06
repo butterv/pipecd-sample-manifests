@@ -1,11 +1,11 @@
 dry-run:
-	kustomize build k8s/overlays/local/ | kubectl apply -f - --dry-run
+	kustomize build k8s/ops/overlays/local/ | kubectl apply -f - --dry-run
 
 run:
-	kustomize build k8s/overlays/local/ | kubectl apply -f -
+	kustomize build k8s/ops/overlays/local/ | kubectl apply -f -
 
 stop:
-	kubectl delete -k k8s/overlays/local/
+	kubectl delete -k k8s/ops/overlays/local/
 
 rollout-proxy-watch:
 	kubectl argo rollouts get rollout secret-sample-proxy -w
