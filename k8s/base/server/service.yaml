@@ -9,7 +9,7 @@ spec:
   clusterIP: None  # headless service
   ports:
   - protocol: TCP
-    port: 8081  # no targetPort for headless service
+    port: 10000  # no targetPort for headless service
 ---
 apiVersion: v1
 kind: Service
@@ -22,4 +22,4 @@ spec:
   clusterIP: None # headless service
   ports:
     - protocol: TCP
-      port: 8081  # no targetPort for headless service
+      port: 10000  # no targetPort for headless service

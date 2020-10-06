@@ -1,0 +1,10 @@
+bases:
+  - ../../base
+
+resources:
+  - db/deployment.yaml
+  - db/persistent-volume-claim.yaml
+  - db/service.yaml
+
+patches:
+  - sealed-secret/sealed-secret.yaml

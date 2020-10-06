@@ -86,7 +86,7 @@ data:
                 - endpoint:
                     address:
                       socket_address:
-                        address: secret-sample-server-active
+                        address: gitops-sample-server-active
                         port_value: 10000
     admin:
       access_log_path: /tmp/admin_access.log
