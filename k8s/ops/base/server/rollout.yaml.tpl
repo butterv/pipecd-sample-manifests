@@ -63,7 +63,7 @@ spec:
               httpHeaders:
                 - name: x-envoy-livenessprobe
                   value: healthz
-              port: 8081
+              port: 10000
             initialDelaySeconds: 3
           livenessProbe:
             httpGet:
@@ -72,7 +72,7 @@ spec:
               httpHeaders:
                 - name: x-envoy-livenessprobe
                   value: healthz
-              port: 8081
+              port: 10000
             initialDelaySeconds: 10
       volumes:
         - name: envoy-volume

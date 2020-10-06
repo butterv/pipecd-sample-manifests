@@ -2,7 +2,7 @@
 set -eu
 
 case "$1" in
-  "local" | "dev" | "stg" | "prd") ;;
+  "local" | "dev" | "staging" | "production") ;;
   * )
     echo "The environment is not exist."
     exit 1
