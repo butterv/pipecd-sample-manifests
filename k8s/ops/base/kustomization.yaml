@@ -8,3 +8,6 @@ resources:
   - server/configmap.yaml
   - server/rollout.yaml
   - server/service.yaml
+
+configurations:
+  - argo-rollout/rollout-transform.yaml
