@@ -2,12 +2,9 @@ resources:
   - job/job.yaml
   - migration/job.yaml
   - proxy/configmap.yaml
-  - proxy/rollout.yaml
+  - proxy/deployment.yaml
   - proxy/service.yaml
   - sealed-secret/sealed-secret.yaml
   - server/configmap.yaml
-  - server/rollout.yaml
+  - server/deployment.yaml
   - server/service.yaml
-
-configurations:
-  - argo-rollout/rollout-transform.yaml
