@@ -59,16 +59,3 @@ spec:
         - name: envoy-volume
           configMap:
             name: envoy-gitops-sample-proxy-config
-  strategy:
-    blueGreen:
-      # The ActiveService specifies the service to update with the new template hash at time of promotion.
-      # This field is mandatory for the blueGreen update strategy.
-      activeService: gitops-sample-gateway-active
-      # The PreviewService field references a Service that will be modified to send traffic to the new replicaset
-      # before the new one is promoted to receiving traffic from the active service.
-      previewService: gitops-sample-gateway-preview
-      # The AutoPromotionEnabled will make the rollout automatically promote the new ReplicaSet to the active service once the new ReplicaSet is healthy.
-      # This field is defaulted to true if it is not specified.
-      autoPromotionEnabled: false
-      # The ScaleDownDelaySeconds is used to delay scaling down the old ReplicaSet after the active Service is switched to the new ReplicaSet.
-      scaleDownDelaySeconds: 60
