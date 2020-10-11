@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: gitops-sample-server-active
+  name: pipecd-sample-server-active
 spec:
   selector:
-    app: gitops-sample-server
+    app: pipecd-sample-server
   type: ClusterIP
   clusterIP: None  # headless service
   ports:
@@ -14,10 +14,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: gitops-sample-server-preview
+  name: pipecd-sample-server-preview
 spec:
   selector:
-    app: gitops-sample-server
+    app: pipecd-sample-server
   type: ClusterIP
   clusterIP: None # headless service
   ports:

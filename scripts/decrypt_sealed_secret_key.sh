@@ -14,9 +14,9 @@ fi
 scripts_dir="$(dirname "$0")"
 $scripts_dir/enable_env_name.sh $1
 
-gcloud config set project gitops-sample-$1
+gcloud config set project pipecd-sample-$1
 gcloud kms decrypt \
-    --project=gitops-sample-$1 \
+    --project=pipecd-sample-$1 \
     --location=global \
     --keyring=api \
     --key=sealed-secret \

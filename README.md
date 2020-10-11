@@ -1,1 +1,1 @@
-# gitops-sample-manifests
+# pipecd-sample-manifests

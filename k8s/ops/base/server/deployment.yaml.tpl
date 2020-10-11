@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gitops-sample-server
+  name: pipecd-sample-server
 spec:
   replicas: 2
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: gitops-sample-server
+      app: pipecd-sample-server
   template:
     metadata:
       labels:
-        app: gitops-sample-server
+        app: pipecd-sample-server
     spec:
       containers:
-        - name: gitops-sample-server
+        - name: pipecd-sample-server
           image: gcr.io/PROJECT_ID/app:COMMIT_SHA
-          command: ["/gitops-sample-server"]
+          command: ["/pipecd-sample-server"]
           imagePullPolicy: Always
           resources:
             limits:
@@ -77,4 +77,4 @@ spec:
       volumes:
         - name: envoy-volume
           configMap:
-            name: envoy-gitops-sample-server-config
+            name: envoy-pipecd-sample-server-config

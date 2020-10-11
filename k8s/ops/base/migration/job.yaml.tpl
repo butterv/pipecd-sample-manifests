@@ -1,10 +1,10 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  annotations:
-    argocd.argoproj.io/hook: PreSync
-    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
-    argocd.argoproj.io/sync-wave: "3"
+#  annotations:
+#    argocd.argoproj.io/hook: PreSync
+#    argocd.argoproj.io/hook-delete-policy: BeforeHookCreation
+#    argocd.argoproj.io/sync-wave: "3"
   name: migration
   labels:
     job-name: migration-job

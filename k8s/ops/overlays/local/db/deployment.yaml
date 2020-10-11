@@ -20,7 +20,7 @@ spec:
             - name: MYSQL_ROOT_PASSWORD
               value: password
             - name: MYSQL_DATABASE
-              value: gitops_sample
+              value: pipecd_sample
             - name: MYSQL_ROOT_HOST
               value: '%'
           args:

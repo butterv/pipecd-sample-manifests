@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gitops-sample-gateway
+  name: pipecd-sample-gateway
 spec:
   replicas: 2
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: gitops-sample-gateway
+      app: pipecd-sample-gateway
   template:
     metadata:
       labels:
-        app: gitops-sample-gateway
+        app: pipecd-sample-gateway
     spec:
       containers:
-        - name: gitops-sample-gateway
+        - name: pipecd-sample-gateway
           image: gcr.io/PROJECT_ID/app:COMMIT_SHA
           resources:
             limits:
@@ -23,7 +23,7 @@ spec:
             requests:
               cpu: 200m
               memory: 500Mi
-          command: ["/gitops-sample-proxy"]
+          command: ["/pipecd-sample-proxy"]
           args: ["--grpc-server-endpoint=127.0.0.1:9090"]
           imagePullPolicy: "Always"
           ports:
@@ -58,4 +58,4 @@ spec:
       volumes:
         - name: envoy-volume
           configMap:
-            name: envoy-gitops-sample-proxy-config
+            name: envoy-pipecd-sample-proxy-config
